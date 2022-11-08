@@ -29,7 +29,8 @@ main .code-container .code-frame {
     width: 400px;
     height: 400px;
     background-image: url("./images/image-qr-code.png");
-    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     border-radius: 20px;
 }
 
@@ -38,10 +39,25 @@ main .code-container .code-label {
 }
 main .code-container .code-label h1 {
     font-weight: 700;
-    color: hsl(218, 44%, 22%)
+    color: hsl(218, 44%, 22%);
 }
 
 main .code-container .code-label h2 {
     font-weight: 400;
     color: hsl(220, 15%, 55%);
+}
+
+@media screen and (max-width: 375px) {
+    main .code-container {
+        width: 250px;
+    }
+
+    main .code-container .code-frame {
+        width: 250px;
+        height: 250px;
+    }
+
+    main .code-container .code-label {
+        font-size: 65%;
+    }
 }
